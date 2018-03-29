@@ -31,6 +31,7 @@
     "gulp": "npm run ts && gulp",
     "lint": "npm run ts && cross-env NODE_ENV=production gulp lint && npm run cleanup",
     "nsp": "nsp check",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run check && npm run build",
     "test": "jest --config ./.jestrc.json",
     "ts": "tsc --target esnext --lib esnext,esnext.asynciterable --module commonjs gulpfile.ts"
@@ -68,5 +69,9 @@
   "engines": {
     "node": ">= 8.9.0",
     "npm": ">= 5.5.1"
-  }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ]
 }
