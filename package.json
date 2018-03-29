@@ -23,16 +23,16 @@
     "url": "git@github.com:motss/lit-ntml.git"
   },
   "scripts": {
-    "build": "npm run ts && cross-env NODE_ENV=production gulp build && npm run cleanup",
-    "build:debug": "npm run ts && gulp build && npm run cleanup",
-    "check": "npm run lint && npm run nsp",
+    "build": "yarn ts && cross-env NODE_ENV=production gulp build && yarn cleanup",
+    "build:debug": "yarn ts && gulp build && yarn cleanup",
+    "check": "yarn lint && yarn nsp",
     "cleanup": "rm -rf gulpfile.js",
     "demo": "node src/demo/",
-    "gulp": "npm run ts && gulp",
-    "lint": "npm run ts && cross-env NODE_ENV=production gulp lint && npm run cleanup",
+    "gulp": "yarn ts && gulp",
+    "lint": "yarn ts && cross-env NODE_ENV=production gulp lint && yarn cleanup",
     "nsp": "nsp check",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run check && npm run build",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn check && yarn build",
     "test": "jest --config ./.jestrc.json",
     "ts": "tsc --target esnext --lib esnext,esnext.asynciterable --module commonjs gulpfile.ts"
   },
